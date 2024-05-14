@@ -13,6 +13,7 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 {% macro snowflake__create_query(target_database, target_schema, target_table) -%}
 
+  
     {% set get_current_timestamp %}
         SELECT CAST(CONVERT_TIMEZONE('UTC', CURRENT_TIMESTAMP()) AS TIMESTAMP_NTZ) AS utc_time_zone
     {% endset %}
